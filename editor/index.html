@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="canonical" href="https://yos.io//">
+  <meta name="author" content="Yos Riady">
+  <meta property="og:site_name" content="Web Automation Markup Language">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://waml.io" />
+
+  <meta name="description" content="The Web Automation Markup Language (WAML) defines a standard, programming language-agnostic specification for a sequence of steps which can be performed on web pages within the context of a web browser.">
+  <meta property="og:title" content="Web Automation Markup Language">
+  <meta property="og:description" content="The Web Automation Markup Language (WAML) defines a standard, programming language-agnostic specification for a sequence of steps which can be performed on web pages within the context of a web browser.">
+  <meta name="twitter:description" content="The Web Automation Markup Language (WAML) defines a standard, programming language-agnostic specification for a sequence of steps which can be performed on web pages within the context of a web browser.">
+
+  <meta name="viewport" content="width=device-width">
+
+	<title>WAML Editor</title>
+
+	<link rel='shortcut icon' type='image/x-icon' href='../img/favicon.ico' />
+	<link href='../css/editor.css' rel ='stylesheet'>
+</head>
+<body>
+	<header>
+		<button>Validate WAML</button>
+		<select>
+		  <option value="google">Google Search Example</option>
+		  <option value="hn">Hacker News Example</option>
+		</select>
+		<p id="credits">WAML editor by <a href='https://yos.io'>Yos Riady</a></p>
+	</header>
+
+	<div id="container"></div>
+	<div id="validation"></div>
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/6.1.1/ajv.bundle.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/6.1.1/ajv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.1/require.min.js"></script>
+	<script type="text/javascript" src="monaco-editor/min/vs/loader.js"></script>
+	<script type="text/javascript" src="../js/editor.js"></script>
+	<script type="text/javascript" src="../js/yaml.min.js"></script>
+</body>
+</html>
