@@ -83,6 +83,12 @@ body:not(.no-literate) .content > pre, body:not(.no-literate) .content > blockqu
 .content > pre {
   background-color: rgba(0,0,0,0.5);
   padding: 20px;
+  padding-left: 30px;
+}
+
+.content > blockquote {
+  padding: 20px;
+  padding-left: 30px;
 }
 
 body:not(.no-literate) .content-root {
