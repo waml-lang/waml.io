@@ -6,10 +6,47 @@ var EXAMPLES = {
     'waml: 0.1.0',
     '',
     'steps:',
-    '    - click: a.link'
+    '    - visit: https://google.com',
+    '    - fill:',
+    '        selector: input#search',
+    '        value: Ugandan knuckles',
+    '    - click: a#search',
+    '    - wait:',
+    '    - snap: test.png'
   ].join('\n'),
   hn: [
-    'test'
+    'waml: 0.1.0',
+    '',
+    'info:',
+    '    description: Scrapes the link titles from the Hacker News frontpage',
+    '',
+    'steps:',
+    '    - visit: https://news.ycombinator.com/news',
+    '    - scrape:',
+    '        selector: a.storylink',
+    '        attr: textContent',
+    '        as: hackerNewsTitles'
+  ].join('\n'),
+  youtube: [
+    'waml: 0.1.0',
+    '',
+    'info:',
+    "    description: Looks for Fleetwood Mac's Dreams video on youtube.com and clicks on the third video. Waits for 5 seconds for the video to load.",
+    '',
+    'steps:',
+    '    - visit: https://youtube.com',
+    '    - fill:',
+    "        selector: '#search'",
+    "        value: innerText",
+    "    - click: button#search-icon-legacy",
+    "    - wait: ytd-thumbnail.ytd-video-renderer",
+    "    - snap: foo.png",
+    "    - click:",
+    "        selector: ytd-thumbnail.ytd-video-renderer",
+    "        index: 2 # click 3rd video from the list",
+    "    - wait: .html5-video-container",
+    "    - wait: 5000",
+    "    - snap: bar.png"
   ].join('\n')
 }
 var ajv = new Ajv();
