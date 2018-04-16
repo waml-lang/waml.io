@@ -115,3 +115,7 @@ body:not(.no-literate) .content-root {
 .content-root {
   padding-left: 200px;
 }
+
+.content p img {
+  max-width: 450px;
+}
