@@ -23,9 +23,7 @@ var EXAMPLES = {
     'steps:',
     '    - visit: https://news.ycombinator.com/news',
     '    - scrape:',
-    '        selector: a.storylink',
-    '        attr: textContent',
-    '        as: hackerNewsTitles'
+    '        hackerNewsTitles: sm a.storylink | rp textContent'
   ].join('\n'),
   youtube: [
     'waml: 0.1.0',
