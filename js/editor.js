@@ -12,7 +12,8 @@ var EXAMPLES = {
     '        value: Ugandan knuckles',
     '    - click: a#search',
     '    - wait:',
-    '    - snap: test.png'
+    '    - snap:',
+    '        filename: test'
   ].join('\n'),
   hn: [
     'waml: 0.1.0',
@@ -23,7 +24,7 @@ var EXAMPLES = {
     'steps:',
     '    - visit: https://news.ycombinator.com/news',
     '    - scrape:',
-    '        hackerNewsTitles: sm a.storylink | rp textContent'
+    '        hackerNewsTitles: select a.storylink {0,} | get text'
   ].join('\n'),
   youtube: [
     'waml: 0.1.0',
@@ -38,13 +39,15 @@ var EXAMPLES = {
     "        value: innerText",
     "    - click: button#search-icon-legacy",
     "    - wait: ytd-thumbnail.ytd-video-renderer",
-    "    - snap: foo.png",
+    "    - snap: foo",
+    "        filename: foo"
     "    - click:",
     "        selector: ytd-thumbnail.ytd-video-renderer",
     "        index: 2 # click 3rd video from the list",
     "    - wait: .html5-video-container",
     "    - wait: 5000",
-    "    - snap: bar.png"
+    "    - snap:",
+    "        filename: bar"
   ].join('\n')
 }
 var ajv = new Ajv();
