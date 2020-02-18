@@ -40,7 +40,7 @@ var EXAMPLES = {
     "    - click: button#search-icon-legacy",
     "    - wait: ytd-thumbnail.ytd-video-renderer",
     "    - snap: foo",
-    "        filename: foo"
+    "        filename: foo",
     "    - click:",
     "        selector: ytd-thumbnail.ytd-video-renderer",
     "        index: 2 # click 3rd video from the list",
