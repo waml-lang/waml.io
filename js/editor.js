@@ -52,7 +52,7 @@ var EXAMPLES = {
 }
 var ajv = new Ajv();
 
-require.config({ paths: { 'vs': 'monaco-editor/min/vs' }});
+require.config({ paths: { 'vs': 'editor/monaco-editor/min/vs' }});
 require(['vs/editor/editor.main'], function() {
   window.editor = monaco.editor.create(document.getElementById('container'), {
     value: EXAMPLES['google'],
